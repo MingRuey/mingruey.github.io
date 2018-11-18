@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12c077cc-6ab8-4292-994c-b3763146b80e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Resume-TC/resume.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resume-TC/resume/committees.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resume-TC/resume/education.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resume-TC/resume/experience.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resume-TC/resume/extracurricular.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resume-TC/resume/honors.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resume-TC/resume/presentation.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resume-TC/resume/summary.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resume-TC/resume/writing.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inFRESH/contact.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inFRESH/education.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inFRESH/experience.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inFRESH/statement.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,30 +15,33 @@
     <session id="-1556920888">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Makerfile" value="1" />
-          <entry key="html" value="1" />
+          <entry key="html" value="2" />
+          <entry key="jpg" value="1" />
           <entry key="json" value="18" />
           <entry key="log" value="2" />
-          <entry key="md" value="4" />
+          <entry key="md" value="8" />
           <entry key="tex" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="2" />
+          <entry key="Image" value="1" />
           <entry key="JSON" value="18" />
           <entry key="LaTeX source file" value="4" />
-          <entry key="Markdown" value="4" />
+          <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -60,7 +51,7 @@
           <entry key="Python Console" value="94" />
           <entry key="html" value="133" />
           <entry key="json" value="563" />
-          <entry key="md" value="63" />
+          <entry key="md" value="134" />
           <entry key="tex" value="105" />
           <entry key="txt" value="30" />
         </counts>
@@ -70,7 +61,7 @@
           <entry key="HTML" value="133" />
           <entry key="JSON" value="563" />
           <entry key="LaTeX source file" value="105" />
-          <entry key="Markdown" value="63" />
+          <entry key="Markdown" value="134" />
           <entry key="PLAIN_TEXT" value="32" />
           <entry key="Python" value="94" />
         </counts>
@@ -83,13 +74,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Resume-TC/resume.tex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="69" column="27" lean-forward="true" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-              <folding>
-                <element signature="e#595#616#2" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="133">
+                <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -109,8 +100,8 @@
         <option value="$PROJECT_DIR$/inFRESH/education.json" />
         <option value="$PROJECT_DIR$/inFRESH/statement.json" />
         <option value="$PROJECT_DIR$/test.tex" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Resume-TC/resume.tex" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -125,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,20 +124,14 @@
               <item name="Resume" type="b2602c69:ProjectViewProjectNode" />
               <item name="Resume" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Resume" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Resume" type="462c0819:PsiDirectoryNode" />
-              <item name="Resume-TC" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/usr/bin/arara" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -178,11 +164,6 @@
       </texify>
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="LaTeX.test" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -214,7 +195,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1920" height="1051" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" weight="0.32976446" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -225,14 +205,14 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32939914" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32901832" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32939914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.3222698" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.123390555" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -244,13 +224,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="test on html" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Makerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -289,16 +262,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.tex" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="133">
-            <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Awesome-CV/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -312,18 +275,31 @@
         <state relative-caret-position="-815" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resume-TC/resume/honors.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Resume-TC/resume/honors.tex" />
     <entry file="file://$PROJECT_DIR$/Resume-TC/resume.tex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
-          <caret line="69" column="27" lean-forward="true" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-          <folding>
-            <element signature="e#595#616#2" expanded="true" />
-          </folding>
+          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Freyja.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="133">
+            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

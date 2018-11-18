@@ -1,14 +1,7 @@
 # Ray's Resume
-Chinese resume modified from [geekplux's moderncv template](https://github.com/geekplux/cv_resume)
-English resume generated from [HackMyResume](https://github.com/hacksalot/HackMyResume)
+Resume modified from [geekplux's moderncv template](https://github.com/geekplux/cv_resume)
 
-## Build
-```bash
-# Run local serve
-make build
-make dev
+(EN) CV: [Click Me](https://github.com/MingRuey/mingruey.github.io/blob/master/Resume-EN/resume.pdf)
 
-# Create static file
-make pdf
-make html
-```
+(中文) 履歷: [請參考](https://github.com/MingRuey/mingruey.github.io/blob/master/Resume-TC/resume.pdf)
+

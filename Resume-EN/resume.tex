@@ -1,0 +1,151 @@
+% # -*- coding:utf-8 -*-
+%% start of file `resume.tex'.
+%% Author imchou239@gmail.com 
+%
+% Copyright 2006-1008 Xavier Danaux (xdanaux@gmail.com).
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage{fontspec}
+\setmainfont{Roboto}
+\usepackage{xcolor}
+
+\setmainfont{Roboto}
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+
+% moderncv themes
+\moderncvtheme[orange]{classic}                 
+% optional argument: 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+
+% change the colmn width of dates
+%\setlength{\hintscolumnwidth}{3cm}
+
+% Classic theme only, change the width of name placeholder 
+% (to leave more space for your address details
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}
+\AtBeginDocument{\recomputelengths}
+
+% personal data
+\firstname{Ming Ruey(Ray)}
+\familyname{Chou}
+
+% optional
+\title{  }
+  %\address{1990/09/11}{}
+  %\fax{fax}
+\mobile{(+886) 966525557}
+\address{}{}
+\email{imchou239@gmail.com}
+  %\homepage{Blog: http://geekplux.com}
+\social[github]{MingRuey}
+\extrainfo{%
+  Twitter: imchou239\\
+  Taipei, Taiwan
+}
+% \quote{“There is no authority who decides what is a good idea.”}
+% \photo[55pt]{RayModified_Cropped.jpg}
+
+% Suppress automatic page numbering for CVs longer than one page
+%\nopagenumbers{}
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\vspace*{-15mm}
+
+\section{SKILLLS}
+\cvline{\textbf{Programming}}{Python:\space\footnotesize{Linux - IDE and Virtualenv/Docker, Windows - Anaconda},\quad\normalsize Java,\quad IDL,\quad Labview}
+\cvline{\textbf{ML}}{TensorFlow,\quad Keras, \quad Scikit-Learn, \quad Pandas,\quad Lightgbm}
+\cvline{\textbf{Visualization}}{Basics of Matplolib, Seaborn;\quad OriginLab}
+\cvline{\textbf{DB}}{Basics of SQL and MySQL}
+\cvline{\textbf{Language}}{Mandarin:\space\space Native;\quad English:\space\space Fluent}
+\vspace{-0.6\baselineskip}
+
+\section{PROJECTS}
+\subsection{Kaggle - iMaterialist Challenge(Fashion) at FGVC5}
+\cvline{\footnotesize{Top 16\%}}{\footnotesize{Multi-label classification competition over one million images. I did transfer learning for standard CNNs with Keras, and use GrabCut and spectral saliency detection to segment background/foreground as preprocessing.}}
+\subsection{Kaggle - Avito Demand Prediction Challenge}
+\cvline{\footnotesize{Top 27\%}}{\footnotesize{Predict the demand over one million products on Avito.ru website. After standard missing value handling, one-hot encoding, and data normalization, I tackled the task with iterative process of EDA and GBDT modeling with LightGBM. Using both feature importance given by the model and observation from EDA to improve the model.}}
+\subsection{Kaggle - Google AI Open Images - Object Detection Track}
+\cvline{\footnotesize{Top 19\%}}{\footnotesize{An object detection competition on \href{https://storage.googleapis.com/openimages/web/index.html}{Open Images Dataset V4}. I packed the data into TFRecord format and used \href{https://github.com/tensorflow/models/tree/master/research/object_detection}{TensorFlow object detection API} to do transfer learning on Faster-RCNN architecture.}}
+\subsection{Kaggle - RSNA Pneumonia Detection Challenge}
+\cvline{\footnotesize{Top 21\%}}{\footnotesize{Predict the location of Pneumoniaon on X-ray images. Using TensorFlow, I built Unet and Faster-RCNN from scratch, trained models with Estimator API and applied data augmentation including half-splitting, rotating, and flipping.}}
+\subsection{T-Brain AI- Taiwan ETF Price Prediction}
+\cvline{}{\footnotesize{Use ARIMA to predict the time series of ETF price. Also experiemt with traditional technical indicators like RSI, stochastic oscillator, \%R, Chaikin oscillator CCI .etc as features for a random forest classifier.}}
+\vspace{-0.6\baselineskip}
+
+\section{EDUCATION}
+% \cventry{year--year}{Job title}{Employer}{City}{}{Description}
+% arguments 3 to 6 are optional
+\cventry{\footnotesize{13.09 - 16.07}}{M.S. in Physics}{Department of Physics}{National Taiwan University}{}{}
+\cventry{\footnotesize{09.09 - 13.07}}{B.S. in Physics}{Department of Physics}{National Taiwan University}{}{}
+\cventry{}{Course Work -- Coursera :}{}{}{}{}
+\cvlistitem{Algorithms 4E, Robert Sedgewick and Kevin Wayne; Princeton}
+\cvlistitem{Machine Learning Foundations, Hsuan-Tien Lin; NTU}
+\cvlistitem{Machine Learning, Andrew Ng; Standford}
+\cvlistitem{Introduction to SQL, Charles Severance; Michigan}
+\cvlistitem{SQL for Data Science, Sadie St. Lawrence; UC Davis}
+\vspace{-0.6\baselineskip}
+
+\section{WRITING}
+\cvline{\footnotesize{M.S. Thesis}}{\textbf{Rheometry on Concentrated Suspension of Soft Particles}}{}
+\cvline{}{\href{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}{(In Mandarin) \emph{www.phys.sinica.edu.tw/jctsai/Ray2016/}}}
+\vspace{-0.6\baselineskip}
+
+\section{OTHER EXPERIENCE}
+\cventry{\footnotesize{18.01 ; 18.07}}{Twin Oaks Education}{Course Design and Project Mentor}{\href{http://www.twinoaks-edu.com/}{www.twinoaks-edu.com/}}{}{}
+\cventry{\footnotesize{16.09 - 17.08}}{Substitue Services in Education}{Xinyi Elementary School}{
+Hualien, Taiwan}{}{}
+
+
+% \section{Computer skills}
+% \cvcomputer{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+% \cvcomputer{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+% \cvcomputer{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+% \section{Interests}
+% \cvline{橋牌}{\small 沒有高手的程度 也要有高手的風度}
+% \cvline{桌遊}{\small 買了一屋子遊戲 找不到一桌朋友}
+% \cvline{鋼琴}{\small 誰叫你不練琴呢？}
+
+% \renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+% \section{Extra 1}
+% \cvlistitem{Item 1}
+% \cvlistitem{Item 2}
+% \cvlistitem[+]{Item 3}            
+
+% \section{Extra 2}
+% \cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
+% \cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
+% \cvlistdoubleitem[\Neutral]{Item 3}{}
+
+%% Publications from a BibTeX file
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}
+% \begin{thebibliography}{}
+% \bibitem[]{}
+% \end{thebibliography}
+
+
+\end{document}
+
+
+%% end of file `resume.tex'.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: t
+%%% TeX-engine: xetex
+%%% End:
