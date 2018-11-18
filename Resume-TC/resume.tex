@@ -1,0 +1,155 @@
+% # -*- coding:utf-8 -*-
+%% start of file `resume.tex'.
+%% Author imchou239@gmail.com 
+%
+% Copyright 2006-1008 Xavier Danaux (xdanaux@gmail.com).
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage{fontspec}
+\setmainfont{Roboto}
+\usepackage[slantfont ,boldfont]{xeCJK} 
+\usepackage{xcolor}
+
+\setmainfont{Roboto}
+\setCJKmainfont{Noto Sans CJK TC}
+\setCJKsansfont{Noto Sans CJK TC}
+\setCJKmonofont{Noto Sans CJK TC}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+
+% moderncv themes
+\moderncvtheme[blue]{classic}                 
+% optional argument: 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+
+% change the colmn width of dates
+%\setlength{\hintscolumnwidth}{3cm}
+
+% Classic theme only, change the width of name placeholder 
+% (to leave more space for your address details
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}
+\AtBeginDocument{\recomputelengths}
+
+% personal data
+\firstname{周}
+\familyname{明叡}
+
+% optional
+\title{Ming Ruey(Ray) Chou}    
+  %\address{1990/09/11}{}
+  %\fax{fax}
+\mobile{0966525557}
+\address{}{}
+\email{imchou239@gmail.com}
+  %\homepage{Blog: http://geekplux.com}
+\social[github]{MingRuey}
+\extrainfo{%
+  Twitter: imchou239\\
+  台北市伊通街125巷3號6樓
+}
+\photo[55pt]{RayModified_Cropped.jpg}
+%\quote{They are just things that nobody can know. Your situation is just an accident of life.}
+
+% Suppress automatic page numbering for CVs longer than one page
+%\nopagenumbers{}
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\vspace*{-14mm}
+
+\section{技能}
+\cvline{\textbf{程式語言}}{Python:\space\space\footnotesize{Linux - IDE 及 Virtualenv/Docker, \space\space Windows - Anaconda},\space\space\space Java,\quad IDL, \quad Labview, \quad Matlab(Octave)}
+\cvline{\textbf{機器學習}}{Tensorflow,\quad Keras, \quad Scikit-Learn, \quad Pandas,\quad Lightgbm 等主流套件。}
+\cvline{\textbf{資料視覺化}}{基礎Python繪圖 Matplolib, Seaborn;\quad Origin 繪圖軟體。}
+\cvline{\textbf{資料庫}}{基礎SQL指令與MySQL使用。}
+\cvline{\textbf{語言能力}}{中文:\space\space 母語;\quad 英文:\space\space 流利。}
+\vspace{-0.6\baselineskip}
+
+\section{實作經驗}
+\subsection{Kaggle - iMaterialist Challenge(Fashion) at FGVC5}
+\cvline{\footnotesize{Top 16\%}}{\footnotesize{超過百萬張服飾照片的多標籤分類比賽。我寫了多執行緒的腳本下載圖片，以 Keras 對預訓練模型進行遷移式學習。使用了 基於頻譜的顯著性分析 與 GrabCut 等前背景分離技術進行預處理。}}
+\subsection{Kaggle - Avito Demand Prediction Challenge}
+\cvline{\footnotesize{Top 27\%}}{\footnotesize{拍賣網站的商品成交率預測比賽。對資料進行補值、標準化、One-Hot Encoding 等前處理，我以 GBDT(Lightgbm) 作為主要模型，透過 EDA 與觀察模型結果來進行特徵選擇與特徵工程。}}
+\subsection{Kaggle - Google AI Open Images - Object Detection Track}
+\cvline{\footnotesize{Top 19\%}}{\footnotesize{在\href{https://storage.googleapis.com/openimages/web/index.html}{Open Images Dataset V4}資料庫上舉辦的物件偵測比賽。將資料封裝成TFRecord格式，使用 \href{https://github.com/tensorflow/models/tree/master/research/object_detection}{Tensorflow的物件偵測 API} 對預訓練過的 Faster-RCNN 進行遷移式學習。}}
+\subsection{Kaggle - RSNA Pneumonia Detection Challenge}
+\cvline{\footnotesize{Top 21\%}}{\footnotesize{從X光照片預測肺炎位置的物件偵測比賽。我用 Tensorflow 從無到有的編寫了 Unet 及 Faster-RCNN 架構，透過Estimator API 訓練，並使用對半分割、旋轉與翻轉等資料增強方法。}}
+\subsection{T-Brain AI實戰吧- 台灣ETF價格預測競賽}
+\cvline{}{\footnotesize{除了使用ARIMA對時間序列進行預測，也嘗試把 RSI、隨機指標(\%K\%D)、威廉指標、Chaikin擺動指標、順勢指標等傳統的股市分析指數作為資料特徵，以隨機森林方法進行預測。}}
+\vspace{-0.6\baselineskip}
+
+\section{學歷}
+% \cventry{year--year}{Job title}{Employer}{City}{}{Description}
+% arguments 3 to 6 are optional
+\cventry{\footnotesize{13.09 - 16.07}}{碩士}{國立台灣大學物理學研究所}{}{}{}
+\cventry{\footnotesize{09.09 - 13.07}}{學士}{國立台灣大學物理學系}{}{}{}
+\cventry{}{Coursera 線上課程}{}{}{}{}
+\cvlistitem{Algorithms 4E, Robert Sedgewick and Kevin Wayne; Princeton}
+\cvlistitem{機器學習基石, 林軒田; NTU}
+\cvlistitem{Machine Learning, Andrew Ng; Standford}
+\cvlistitem{Introduction to SQL, Charles Severance; Michigan}
+\cvlistitem{SQL for Data Science, Sadie St. Lawrence; UC Davis}
+\vspace{-0.6\baselineskip}
+
+\section{論文}
+\cvline{\footnotesize{碩士論文}}{\textbf{初探軟顆粒懸浮液流變學：自製流變儀}}{}
+\cvline{}{\href{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}{\emph{www.phys.sinica.edu.tw/jctsai/Ray2016/}}}
+\vspace{-0.6\baselineskip}
+
+\section{其他經歷}
+\cventry{\footnotesize{18.01 ; 18.07}}{雙橡海外教育}{課程設計與專案教練}{\href{http://www.twinoaks-edu.com/}{www.twinoaks-edu.com/}}{}{}
+\cventry{\footnotesize{16.09 - 17.08}}{教育替代役168梯次}{花蓮信義國小}{}{}{}
+
+
+% \section{Computer skills}
+% \cvcomputer{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+% \cvcomputer{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+% \cvcomputer{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+% \section{Interests}
+% \cvline{橋牌}{\small 沒有高手的程度 也要有高手的風度}
+% \cvline{桌遊}{\small 買了一屋子遊戲 找不到一桌朋友}
+% \cvline{鋼琴}{\small 誰叫你不練琴呢？}
+
+% \renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+% \section{Extra 1}
+% \cvlistitem{Item 1}
+% \cvlistitem{Item 2}
+% \cvlistitem[+]{Item 3}            
+
+% \section{Extra 2}
+% \cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
+% \cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
+% \cvlistdoubleitem[\Neutral]{Item 3}{}
+
+%% Publications from a BibTeX file
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}
+% \begin{thebibliography}{}
+% \bibitem[]{}
+% \end{thebibliography}
+
+
+\end{document}
+
+
+%% end of file `resume.tex'.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: t
+%%% TeX-engine: xetex
+%%% End:

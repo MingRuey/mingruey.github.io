@@ -1,6 +1,6 @@
 # Ray's Resume
-This is a resume generated from [HackMyResume](https://github.com/hacksalot/HackMyResume)
-
+Chinese resume modified from [geekplux's moderncv template](https://github.com/geekplux/cv_resume)
+English resume generated from [HackMyResume](https://github.com/hacksalot/HackMyResume)
 
 ## Build
 ```bash
