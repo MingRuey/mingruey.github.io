@@ -84,22 +84,22 @@ $\bullet$以 Keras 對預訓練模型進行遷移式學習 \newline $\bullet$ �
 
 \subsection{\href{https://www.kaggle.com/c/avito-demand-prediction}{Kaggle - Avito Demand Prediction Challenge}}
 \cvline{\vspace{-1cm}\scriptsize{\hfill 商品成交率預測} \newline \footnotesize{Top 27\%} }
-{\footnotesize{$\bullet$ 以 Pandas進行補值、標準化、One-Hot Encoding 等資料前處理\space\space $\bullet$ 使用梯度提升決策樹 GBDT(LightGBM) 
+{\footnotesize{$\bullet$ 以 Pandas進行補值、標準化、One-Hot Encoding 等資料前處理\space\space $\bullet$ 採用 LightGBM 讓 GBDT 模型完全在GPU上運行
 \newline $\bullet$ 反覆進行探索式資料分析 EDA、特徵選擇與特徵工程，提高模型預測率}}
 
 \subsection{\href{https://www.kaggle.com/c/google-ai-open-images-object-detection-track}{Kaggle - Google AI Open Images - Object Detection Track}}
 \cvline{\vspace{-1cm}\scriptsize{\hfill 影像物件偵測} \newline \footnotesize{Top 19\%}}
 {\footnotesize{$\bullet$ 訓練集為目前最大的物件偵測資料庫\href{https://storage.googleapis.com/openimages/web/index.html}{ Open Images Dataset V4}\space\space $\bullet$ 將資料封裝成高效能的TFRecord格式
-\newline $\bullet$ 以\href{https://github.com/tensorflow/models/tree/master/research/object_detection}{TensorFlow的物件偵測 API} 對預訓練過的 Faster-RCNN 進行遷移式學習。}}
+\newline $\bullet$ 利用\href{https://github.com/tensorflow/models/tree/master/research/object_detection}{TensorFlow的物件偵測 API} 對預訓練過的 Faster-RCNN 進行遷移式學習。}}
 
 \subsection{\href{https://www.kaggle.com/c/rsna-pneumonia-detection-challenge}{Kaggle - RSNA Pneumonia Detection Challenge}}
 \cvline{\vspace{-1cm}\scriptsize{\hfill X光影像肺炎偵測} \newline \footnotesize{Top 21\%}}
-{\footnotesize{$\bullet$ 從無到有編寫了純Tensorflow的 Unet 及 Faster-RCNN 架構\space\space $\bullet$ 以 Tensorflow Estimator API 自動化訓練模型
-\newline $\bullet$ 以對半分割、旋轉與翻轉做資料增強提高模型預測率}}
+{\footnotesize{$\bullet$ 從無到有編寫了純Tensorflow的 Unet 及 Faster-RCNN 架構\space\space $\bullet$ 透過 Tensorflow Estimator API 完成端對端自動化訓練
+\newline $\bullet$ 做對半分割、旋轉與翻轉等資料增強方法提高模型預測率}}
 
 \subsection{\href{https://tbrain.trendmicro.com.tw/Competitions/Details/2}{T-Brain AI實戰吧- 台灣ETF價格預測競賽}}
 \cvline{\scriptsize{\hfill 時間序列預測}}
-{\footnotesize{採用ARIMA對時間序列進行預測，也嘗試把 RSI、隨機指標(\%K\%D)、威廉指標、Chaikin擺動指標、順勢指標等傳統的股市分析指數作為資料特徵，以隨機森林方法進行預測。}}
+{\footnotesize{$\bullet$ 採用ARIMA對ETF價格序列進行預測 \space\space $\bullet$ 嘗試過隨機森林方法 -- 以RSI、隨機指標(\%K\%D)、威廉指標、Chaikin擺動指標、順勢指標等傳統的股市分析指數作為資料特徵}}
 \vspace{-0.6\baselineskip}
 
 \section{學歷}
