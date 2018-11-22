@@ -76,16 +76,30 @@
 \vspace{-0.6\baselineskip}
 
 \section{實作經驗}
+
 \subsection{\href{https://www.kaggle.com/c/imaterialist-challenge-fashion-2018}{Kaggle - iMaterialist Challenge(Fashion) at FGVC5}}
-\cvline{\footnotesize{Top 16\%}}{\footnotesize{超過百萬張服飾照片的多標籤分類比賽。編寫多執行緒的腳本下載圖片，以 Keras 對預訓練模型進行遷移式學習。使用了 基於頻譜的顯著性分析 與 GrabCut 等前背景分離技術進行預處理。}}
+\cvline{\vspace{-1cm}\scriptsize{\hfill 圖片多標籤分類} \newline \footnotesize{Top 16\%} }
+{\footnotesize{$\bullet$ 編寫多執行緒的腳本加速下載超過百萬張訓練集圖片\space\space 
+$\bullet$以 Keras 對預訓練模型進行遷移式學習 \newline $\bullet$ 使用 基於頻譜的顯著性分析 與 GrabCut 等前背景分離技術進行預處理。}}
+
 \subsection{\href{https://www.kaggle.com/c/avito-demand-prediction}{Kaggle - Avito Demand Prediction Challenge}}
-\cvline{\footnotesize{Top 27\%}}{\footnotesize{拍賣網站的商品成交率預測比賽。對資料進行補值、標準化、One-Hot Encoding 等前處理，以 GBDT(LightGBM) 作為主要模型，透過 EDA 與觀察模型結果來進行特徵選擇與特徵工程。}}
+\cvline{\vspace{-1cm}\scriptsize{\hfill 商品成交率預測} \newline \footnotesize{Top 27\%} }
+{\footnotesize{$\bullet$ 以 Pandas進行補值、標準化、One-Hot Encoding 等資料前處理\space\space $\bullet$ 使用梯度提升決策樹 GBDT(LightGBM) 
+\newline $\bullet$ 反覆進行探索式資料分析 EDA、特徵選擇與特徵工程，提高模型預測率}}
+
 \subsection{\href{https://www.kaggle.com/c/google-ai-open-images-object-detection-track}{Kaggle - Google AI Open Images - Object Detection Track}}
-\cvline{\footnotesize{Top 19\%}}{\footnotesize{在\href{https://storage.googleapis.com/openimages/web/index.html}{Open Images Dataset V4}資料庫上舉辦的物件偵測比賽。將資料封裝成TFRecord格式，使用 \href{https://github.com/tensorflow/models/tree/master/research/object_detection}{TensorFlow的物件偵測 API} 對預訓練過的 Faster-RCNN 進行遷移式學習。}}
+\cvline{\vspace{-1cm}\scriptsize{\hfill 影像物件偵測} \newline \footnotesize{Top 19\%}}
+{\footnotesize{$\bullet$ 訓練集為目前最大的物件偵測資料庫\href{https://storage.googleapis.com/openimages/web/index.html}{ Open Images Dataset V4}\space\space $\bullet$ 將資料封裝成高效能的TFRecord格式
+\newline $\bullet$ 以\href{https://github.com/tensorflow/models/tree/master/research/object_detection}{TensorFlow的物件偵測 API} 對預訓練過的 Faster-RCNN 進行遷移式學習。}}
+
 \subsection{\href{https://www.kaggle.com/c/rsna-pneumonia-detection-challenge}{Kaggle - RSNA Pneumonia Detection Challenge}}
-\cvline{\footnotesize{Top 21\%}}{\footnotesize{從X光照片預測肺炎位置的物件偵測比賽。我用 TensorFlow 從無到有編寫了 Unet 及 Faster-RCNN 架構，透過Estimator API 訓練，並使用對半分割、旋轉與翻轉等資料增強方法。}}
+\cvline{\vspace{-1cm}\scriptsize{\hfill X光影像肺炎偵測} \newline \footnotesize{Top 21\%}}
+{\footnotesize{$\bullet$ 從無到有編寫了純Tensorflow的 Unet 及 Faster-RCNN 架構\space\space $\bullet$ 以 Tensorflow Estimator API 自動化訓練模型
+\newline $\bullet$ 以對半分割、旋轉與翻轉做資料增強提高模型預測率}}
+
 \subsection{\href{https://tbrain.trendmicro.com.tw/Competitions/Details/2}{T-Brain AI實戰吧- 台灣ETF價格預測競賽}}
-\cvline{}{\footnotesize{除了使用ARIMA對時間序列進行預測，也嘗試把 RSI、隨機指標(\%K\%D)、威廉指標、Chaikin擺動指標、順勢指標等傳統的股市分析指數作為資料特徵，以隨機森林方法進行預測。}}
+\cvline{\scriptsize{\hfill 時間序列預測}}
+{\footnotesize{採用ARIMA對時間序列進行預測，也嘗試把 RSI、隨機指標(\%K\%D)、威廉指標、Chaikin擺動指標、順勢指標等傳統的股市分析指數作為資料特徵，以隨機森林方法進行預測。}}
 \vspace{-0.6\baselineskip}
 
 \section{學歷}
