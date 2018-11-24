@@ -48,8 +48,21 @@
   Twitter: imchou239\\
   6F, No.3, Ln.125, Yitong St., Taipei, Taiwan
 }
-% \quote{“There is no authority who decides what is a good idea.”}
 % \photo[55pt]{RayModified_Cropped.jpg}
+\quote{\hbox to 0pt{\hss A self-motivated learner. Devote to technology and programming. \hss}}
+
+% To reduce the space above and below quote
+\usepackage{xpatch}
+\xpatchcmd{\makecvhead}{%
+  \usebox{\makecvheadnamebox}\fi%
+  \\[2.5em]%
+  }{%
+  \usebox{\makecvheadnamebox}\fi%
+  \\[1em]%
+  }{}{}
+%% add the following additionally
+\xpatchcmd{\makecvhead}{\quotestyle{\@quote}\end{minipage}\\[2.5em]}{%
+  \quotestyle{\@quote}\end{minipage}\\[1em]}{}{}
 
 % Suppress automatic page numbering for CVs longer than one page
 %\nopagenumbers{}
@@ -60,7 +73,7 @@
 %----------------------------------------------------------------------------------
 \begin{document}
 \maketitle
-\vspace*{-18mm}
+\vspace*{-11mm}
 
 \section{SKILLLS}
 \cvline{\textbf{Programming}}{Python:\space\footnotesize{Linux - IDE \& Virtualenv/Docker, Windows - Anaconda},\quad\normalsize Java,\quad IDL,\quad Labview}
@@ -68,32 +81,32 @@
 \cvline{\textbf{Visualization}}{Matplolib,\quad Seaborn;\quad OriginLab}
 \cvline{\textbf{Database}}{SQL \& MySQL}
 \cvline{\textbf{Language}}{Mandarin:\space\space Native;\quad English:\space\space Fluent}
-\vspace{-0.7\baselineskip}
+\vspace{-0.75\baselineskip}
 
 \section{PROJECTS}
-\subsection{\href{https://www.kaggle.com/c/imaterialist-challenge-fashion-2018}{Kaggle - iMaterialist Challenge(Fashion) at FGVC5}}
+\subsection{\href{https://www.kaggle.com/c/imaterialist-challenge-fashion-2018}{\small Kaggle - iMaterialist Challenge(Fashion) at FGVC5}}
 \cvline{\vspace{-1cm}\tiny{\hfill Image Classification} \newline \footnotesize{Top 16\%}}
 {\footnotesize{$\bullet$ Wrote multi-thread to speed up processing over one million images\space\space $\bullet$ Transfer learning for standard CNNs with Keras
 \newline $\bullet$ Apllied GrabCut and spectral saliency detection to segment background/foreground for preprocessing}}
 
-\subsection{\href{https://www.kaggle.com/c/avito-demand-prediction}{Kaggle - Avito Demand Prediction Challenge}}
+\subsection{\href{https://www.kaggle.com/c/avito-demand-prediction}{\small Kaggle - Avito Demand Prediction Challenge}}
 \cvline{\vspace{-1cm}\tiny{\hfill Demand Predicting} \newline \footnotesize{Top 27\%}}
 {\footnotesize{$\bullet$ Data preprocessing with Pandas over one million data \space\space $\bullet$ Utilized LightGBM as fully GPU-based GBDT model
 \newline $\bullet$ Tackled the task with iterative process of EDA, using observation from EDA to improve the model}}
 
-\subsection{\href{https://www.kaggle.com/c/google-ai-open-images-object-detection-track}{Kaggle - Google AI Open Images - Object Detection Track}}
+\subsection{\href{https://www.kaggle.com/c/google-ai-open-images-object-detection-track}{\small Kaggle - Google AI Open Images - Object Detection Track}}
 \cvline{\vspace{-1cm}\tiny{\hfill Object Detection} \newline \footnotesize{Top 19\%}}
 {\footnotesize{$\bullet$ Handled the currently largest dataset -- \href{https://storage.googleapis.com/openimages/web/index.html}{Open Images Dataset V4}  \space\space $\bullet$ Packed data into highly efficient TFRecord format
 \newline $\bullet$ Employed \href{https://github.com/tensorflow/models/tree/master/research/object_detection}{TensorFlow object detection API} to do transfer learning on Faster-RCNN architecture.}}
 
-\subsection{\href{https://www.kaggle.com/c/rsna-pneumonia-detection-challenge}{Kaggle - RSNA Pneumonia Detection Challenge}}
+\subsection{\href{https://www.kaggle.com/c/rsna-pneumonia-detection-challenge}{\small Kaggle - RSNA Pneumonia Detection Challenge}}
 \cvline{\vspace{-1cm}\tiny{\hfill Pneumonia Detection} \newline \footnotesize{Top 21\%}}
 {\footnotesize{$\bullet$ Built Unet and Faster-RCNN from scratch with TensorFlow \space\space $\bullet$ Automated trainning with TensorFlow Estimator API
 \newline $\bullet$ Applied data augmentation including half-splitting, rotating, and flipping.}}
 
-\subsection{\href{https://tbrain.trendmicro.com.tw/Competitions/Details/2}{T-Brain AI- Taiwan ETF Price Prediction}}
+\subsection{\href{https://tbrain.trendmicro.com.tw/Competitions/Details/2}{\small T-Brain AI- Taiwan ETF Price Prediction}}
 \cvline{\tiny{\hfill Time Series Prediction}}
-{\footnotesize{$\bullet$ Modeled ETF prices with ARIMA \space\space $\bullet$ Experiemted random forest classifier with traditional technical indicators like RSI, stochastic oscillator, \%R, Chaikin oscillator, CCI .etc as features}}
+{\footnotesize{$\bullet$ Modeled ETF prices with ARIMA \space\space $\bullet$ Experiemted random forest classifier with traditional technical indicators}}
 \vspace{-0.7\baselineskip}
 
 \section{EDUCATION}
@@ -107,12 +120,12 @@
 \cvlistitem{Machine Learning, Andrew Ng; Standford}
 \cvlistitem{Introduction to SQL, Charles Severance; Michigan}
 \cvlistitem{SQL for Data Science, Sadie St. Lawrence; UC Davis}
-\vspace{-0.7\baselineskip}
+\vspace{-0.75\baselineskip}
 
 \section{WRITING}
 \cvline{\footnotesize{M.S. Thesis}}{\textbf{Rheometry on Concentrated Suspension of Soft Particles}}{}
 \cvline{}{\href{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}{(In Mandarin) \emph{www.phys.sinica.edu.tw/jctsai/Ray2016/}}}
-\vspace{-0.7\baselineskip}
+\vspace{-0.75\baselineskip}
 
 \section{OTHER EXPERIENCE}
 \cventry{\scriptsize{JAN, 18 ; JUL, 18}}{Twin Oaks Education}{Course Design and Project Mentor}{\href{http://www.twinoaks-edu.com/}{www.twinoaks-edu.com/}}{}{}
