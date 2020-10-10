@@ -1,6 +1,6 @@
 % # -*- coding:utf-8 -*-
 %% start of file `resume.tex'.
-%% Author imchou239@gmail.com 
+%% Author imchou239@gmail.com
 %
 % Copyright 2006-1008 Xavier Danaux (xdanaux@gmail.com).
 % This work may be distributed and/or modified under the
@@ -10,59 +10,52 @@
 \documentclass[11pt,a4paper]{moderncv}
 
 \usepackage{fontspec}
-\setmainfont{Roboto}
 \usepackage{xcolor}
+\usepackage[scale=0.8, top=1cm, bottom=0cm]{geometry}
 
 \setmainfont{Roboto}
 \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
 % moderncv themes
-\moderncvtheme[orange]{classic}                 
+\moderncvtheme[black]{classic}
 % optional argument: 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
 
 % adjust the page margins
-\usepackage[scale=0.9, top=0.5cm, bottom=0cm]{geometry}
 
-% change the colmn width of dates
-%\setlength{\hintscolumnwidth}{3cm}
+% change the colmn width of the section bar
+\setlength{\hintscolumnwidth}{3cm}
 
-% Classic theme only, change the width of name placeholder 
+% Classic theme only, change the width of name placeholder
 % (to leave more space for your address details
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{8cm}}
 \AtBeginDocument{\recomputelengths}
 
 % personal data
-\firstname{Ming-Ruey(Ray)}
-\familyname{Chou}
+\renewcommand*{\namefont}{\fontsize{25}{30}\mdseries\upshape}
+\firstname{MING-RUEY}
+\familyname{CHOU\hspace{+5em}}
 
 % optional
-\title{  }
-  %\address{1990/09/11}{}
-  %\fax{fax}
-\mobile{(+886) 966525557}
-\address{}{}
+% \title{}
+% \address{}{}
+% \homepage{Blog: http://geekplux.com}
+% \quote{}
 \email{imchou239@gmail.com}
-  %\homepage{Blog: http://geekplux.com}
 \social[github]{MingRuey}
+\mobile{(+886) 966525557}
 \extrainfo{%
-  Twitter: imchou239\\
   6F, No.3, Ln.125, Yitong St., Taipei, Taiwan
 }
-% \photo[55pt]{RayModified_Cropped.jpg}
-\quote{\hbox to 0pt{\hss Self-motivated learner. Devote to technology and programming. \hss}}
 
-% To reduce the space above and below quote
+% Reduce space before content
 \usepackage{xpatch}
 \xpatchcmd{\makecvhead}{%
   \usebox{\makecvheadnamebox}\fi%
   \\[2.5em]%
   }{%
   \usebox{\makecvheadnamebox}\fi%
-  \\[1em]%
+  \\[0.5em]%
   }{}{}
-%% add the following additionally
-\xpatchcmd{\makecvhead}{\quotestyle{\@quote}\end{minipage}\\[2.5em]}{%
-  \quotestyle{\@quote}\end{minipage}\\[1em]}{}{}
 
 % Suppress automatic page numbering for CVs longer than one page
 %\nopagenumbers{}
@@ -73,87 +66,48 @@
 %----------------------------------------------------------------------------------
 \begin{document}
 \maketitle
-\vspace*{-11mm}
 
-\section{SKILLLS}
-\cvline{\textbf{Programming}}{Python:\space\footnotesize{Linux - IDE/Virtualenv/Docker \& Windows - Anaconda},\quad\normalsize Java,\quad IDL,\quad Labview}
-\cvline{\textbf{\footnotesize Machine Learning}}{\vspace*{0cm}TensorFlow,\quad Keras, \quad Scikit-Learn, \quad Pandas,\quad Lightgbm,\quad OpenCV \quad\footnotesize .etc with Python}
-\cvline{\textbf{Database}}{MySQL}
-\cvline{\textbf{Language}}{Mandarin:\space\space Native;\quad English:\space\space Fluent}
-\vspace{-0.75\baselineskip}
+\section{}
+\begin{flushleft}
+Ming-Ruey Chou has hands-on skills of design, train and deploy deep learning models into production-level code.
+He is currently developing image recognition solutions for automated optical inspection (AOI) systems.
+He uses deep learning combined with traditional computer vision to identifying defects in the manufacturing process.
+\end{flushleft}
 
-\section{PROJECTS}
-\subsection{\href{https://www.kaggle.com/c/imaterialist-challenge-fashion-2018}{\small Kaggle - iMaterialist Challenge(Fashion) at FGVC5}}
-\cvline{\footnotesize{In Top 16\%}}
-{\footnotesize{ Multi-label image classification competition on over 1 million fashion pictures
-\newline $\bullet$ Utilized multi-thread programming to speed up processing
-\newline $\bullet$ Transfer learning for standard CNNs with Keras
-\newline $\bullet$ Apllied GrabCut and spectral saliency detection to segment background/foreground for preprocessing}}
+\section{WORK EXPERIENCE}
+% \cventry{year--year}{Job title}{Employer}{City}{}{Description}
+\cventry[1em]{\footnotesize{2020 - Current}}{Computer Vision Engineer, AI Group Leader}{\href{https://www.utechzone.com.tw/index_en.php}{UTECHZONE}}{Taipei}{}{}
+\cvlistitem{Create automated scripts for fast model tuning and performance reports.}
+\cvlistitem{Blend traditional computer vision techniques into deep learning systems to improve performance.}
+\cvline{}{}
+\cventry[1em]{\footnotesize{2019 - 2020}}{Computer Vision Engineer, AI Group}{\href{https://www.utechzone.com.tw/index_en.php}{UTECHZONE}}{Taipei}{}{}
+\cvlistitem{Research on generative adversarial networks (GAN) for defect detections.}
+\cvlistitem{Analyze failures and improve model performance through data augmentation.}
+\cvlistitem{Design, implement, and deploy a new Python-based engine into an existing deep learning library. It enables efficient training and inference and becomes the standard engine thenceforth.}
+\cvlistitem{Build up unit tests and integration tests from scratch, increase test coverage from 0\% to over 70\%.}
 
-\subsection{\href{https://www.kaggle.com/c/google-ai-open-images-object-detection-track}{\small Kaggle - Google AI Open Images - Object Detection Track}}
-\cvline{\footnotesize{In Top 19\%}}
-{\footnotesize{ Object detection competition over 1 million photos with 500+ categories
-\newline $\bullet$ Packed data into highly efficient TFRecord format, handling the largest dataset -- \href{https://storage.googleapis.com/openimages/web/index.html}{Open Images Dataset V4}  
-\newline $\bullet$ Employed \href{https://github.com/tensorflow/models/tree/master/research/object_detection}{TensorFlow object detection API} to do transfer learning on Faster-RCNN architecture}}
-
-\subsection{\href{https://www.kaggle.com/c/rsna-pneumonia-detection-challenge}{\small Kaggle - RSNA Pneumonia Detection Challenge}}
-\cvline{\footnotesize{In Top 21\%}}
-{\footnotesize{ Detect pneumonia and its position from X-ray images
-\newline $\bullet$ Built Unet and Faster-RCNN from scratch with TensorFlow and automated trainning with Estimator API
-\newline $\bullet$ Boosted prediction accuracy with data augmentation techniques including half-splitting, rotating, and flipping}}
-
-\subsection{\href{https://www.kaggle.com/c/avito-demand-prediction}{\small Kaggle - Avito Demand Prediction Challenge}}
-\cvline{\footnotesize{In Top 27\%}}
-{\footnotesize{ Product demand prediction over one million data from Russian shopping website
-\newline $\bullet$ Cleaned and prepocessed data with Pandas
-\newline $\bullet$ Enhanced GPU-based GBDT model performance with iterative process of EDA and feature engineering}}
-
-\subsection{\href{https://tbrain.trendmicro.com.tw/Competitions/Details/2}{\small T-Brain AI- Taiwan ETF Price Prediction}}
-\cvline{}
-{\footnotesize{Time series prediction competition over 50 ETF indices
-\newline $\bullet$ Modeled ETF prices with ARIMA and experiemted random forest classifier with traditional technical indicators}}
-\vspace{-0.7\baselineskip}
+\section{Skills}
+\cvline{\textbf{Languages}}{Python, C\#, C, C++}
+\cvline{\textbf{Computer Vision}}{Opecv/Emgucv in both Python, C\#, and C++}
+\cvline{\textbf{Deep Learning}}{Tensorflow (including Keras API), Numpy related tools}
+\cvline{\textbf{Environment}}{Windows, Linux}
+\cvline{\textbf{Development}}{Git, Docker, NUnit, Pytest}
 
 \section{EDUCATION}
 % \cventry{year--year}{Job title}{Employer}{City}{}{Description}
 % arguments 3 to 6 are optional
-\cventry[0em]{\scriptsize{2016}}{M.S. in Physics}{Department of Physics}{National Taiwan University}{}{}
-\cventry[0em]{\scriptsize{2013}}{B.S. in Physics}{Department of Physics}{National Taiwan University}{}{}
-\cventry[0em]{}{Course Work -- Coursera :}{}{}{}{}
-\cvlistitem[0em]{\footnotesize Algorithms 4E, Robert Sedgewick and Kevin Wayne; Princeton}
-\cvlistitem[0em]{\footnotesize Machine Learning Foundations, Hsuan-Tien Lin; NTU}
-\cvlistitem[0em]{\footnotesize Machine Learning, Andrew Ng; Standford}
-\cvlistitem[0em]{\footnotesize Introduction to SQL, Charles Severance; Michigan}
-\cvlistitem[0em]{\footnotesize SQL for Data Science, Sadie St. Lawrence; UC Davis}
-\vspace{-0.75\baselineskip}
-
-\section{WRITING}
-\cvline{\footnotesize{M.S. Thesis}}{\textbf{Rheometry on Concentrated Suspension of Soft Particles}}{}
-\cvline{}{\href{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}{(In Mandarin) \emph{www.phys.sinica.edu.tw/jctsai/Ray2016/}}}
-\vspace{-0.75\baselineskip}
+\cventry[1em]{\footnotesize{2016}}{M.S. in Physics}{Department of Physics}{National Taiwan University}{}{}
+\cventry[1em]{}{Thesis: Rheometry on Concentrated Suspension of Soft Particles}{}{}{}{}
+\cvline{}{\href{https://doi.org/10.1039/D0SM00405G}{\quad \emph{Publish on Soft Matter: doi.org/10.1039/D0SM00405G}}}
+\cvline{}{\href{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}{\quad \emph{(In Mandarin) Website: www.phys.sinica.edu.tw/jctsai/Ray2016/}}}
+\cvline{}{}
+\cventry[1em]{\footnotesize{2013}}{B.S. in Physics}{Department of Physics}{National Taiwan University}{}{}
 
 \section{OTHER EXPERIENCE}
-\cventry[0em]{\scriptsize{JAN, 18 ; JUL, 18}}{Twin Oaks Education}{Course Design and Project Mentor}{\href{http://www.twinoaks-edu.com/}{www.twinoaks-edu.com/}}{}{}
-\cventry[0em]{\scriptsize{2017}}{Substitute Services in Education}{Xinyi Elementary School}{
-Hualien, Taiwan}{}{}
-
-
-% \section{Computer skills}
-% \cvcomputer{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-% \cvcomputer{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-% \cvcomputer{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
-
-% \section{Interests}
-% \cvline{橋牌}{\small 沒有高手的程度 也要有高手的風度}
-% \cvline{桌遊}{\small 買了一屋子遊戲 找不到一桌朋友}
-% \cvline{鋼琴}{\small 誰叫你不練琴呢？}
+\cventry[1em]{\scriptsize{2018 Jan; 2018 JUL}}{Twin Oaks Education}{Course Design and Project Mentor}{\href{http://www.twinoaks-edu.com/}{www.twinoaks-edu.com/}}{}{}
+\cventry[1em]{\scriptsize{2017}}{Substitute Services in Education}{Xinyi Elementary School}{Hualien, Taiwan}{}{}
 
 % \renewcommand{\listitemsymbol}{-} % change the symbol for lists
-
-% \section{Extra 1}
-% \cvlistitem{Item 1}
-% \cvlistitem{Item 2}
-% \cvlistitem[+]{Item 3}            
 
 % \section{Extra 2}
 % \cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
