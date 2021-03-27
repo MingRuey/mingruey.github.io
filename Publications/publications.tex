@@ -1,0 +1,73 @@
+\documentclass[10pt,a4paper]{article}
+
+%COMPILING: IMPORTANT INFORMATION
+% You'll need to generate a .bbl file from
+% the .bib file first, otherwise the publications
+% will not show up in the cv.
+
+% in TeXstudio, this means
+% 1. F1 or F6 for usual compiling (generate .aux)
+% 2. F8 for bibliography compiling (generate .bbl)
+% 3. F1 or F6 for usual compiling once more(generate .pdf)
+
+% use your favourite citation style here
+\usepackage{apacite}
+\usepackage[left=2.5cm,right=2.5cm,top=1.5cm,bottom=2.5cm]{geometry}
+
+% as bibentry and hyperref clash in some cases, this is a workaround
+% as suggested by the following two links:
+%https://tex.stackexchange.com/questions/227933/using-bibentry-to-cite-in-text-reference-with-apacite
+% and
+%https://tex.stackexchange.com/questions/65348/clash-between-bibentry-and-hyperref-with-bibstyle-elsart-harv/65401#65401
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage[colorlinks=true]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+
+
+% hanging publications: 1st line starts at beginning of line, 
+% further lines are placed a bit to the right
+\usepackage{hanging}
+\newcommand\publication[1]{%
+    \smallskip\par\hangpara{1.5em}{1}\bibentry{#1}\smallskip
+}
+
+% for href color
+\usepackage{xcolor}
+\newcommand{\bwhref}[3][black]{\href{#2}{\color{#1}{#3}}}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+    \begin{center}
+    \large\bf MING-RUEY CHOU\\ % Your name
+    %\vspace{20pt} \hrule height 1pt % If you would like a horizontal line separating the name from the address, uncomment the line to the left of this text
+    6F, No.3, Ln.125, Yitong St. Taipei, Taiwan\\imchou239@gmail.com\\(+886) 966525557% Your address and phone number
+    \end{center} 
+
+    % bibliography
+    % \nobibliography{publications.bib}
+    % \bibliographystyle{apacite} 
+
+    \section*{Master Thesis} 
+    \hangpara{1.5em}{1}Ming-Ruey Chou. (2016).
+    \textit{"Rheometry on Concentrated Suspension of Soft Particles"} \\ \\
+    (In Mandarin) \\
+    Access via: \bwhref{https://hdl.handle.net/11296/n57euw}{https://hdl.handle.net/11296/n57euw}\\
+    Online supplements: \bwhref{www.phys.sinica.edu.tw/jctsai/Ray2016}{www.phys.sinica.edu.tw/jctsai/Ray2016}
+
+    \section*{Publications} 
+    \hangpara{1.5em}{1} J.-C. Tsai, M.-R. Chou, P.-C. Huang, H.-T. Fei and J.-R. Huang
+    \textit{"Soft granular particles sheared at a controlled volume: rate-dependent dynamics and the solid–fluid transition"} Soft Matter, 16, 7535-7543.
+
+    % example with links
+    % \publication{Geirhos2017}
+    %    (\href{https://arxiv.org/abs/1706.06969}{link}, \href{https://arxiv.org/pdf/1706.06969.pdf}{pdf}, \href{https://github.com/rgeirhos/object-recognition}{data and materials})
+
+    % example without links
+    %\publication{Knuth1998}
+    
+\end{document}
+
