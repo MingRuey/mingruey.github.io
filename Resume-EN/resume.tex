@@ -250,12 +250,15 @@
 
 \vspace{-8pt}
 \textcolor{softcol}{\hrule}
+
 \vspace{6pt}{#4}
 \vspace{6pt}
 
-	\foreach \desc in {#5}{
-		$\cdot$ \desc\\[3pt]
-	}
+\ifthenelse{\isempty{#5}}{}{
+    \foreach \desc in {#5}{
+        $\cdot$ \desc\\[3pt]
+    }%
+}
 	
 \vspace{3pt}
 }
