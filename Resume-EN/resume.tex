@@ -68,6 +68,9 @@
 % more font size definitions
 \usepackage{moresize}		
 
+% reduce spaces between sections 
+\usepackage[compact]{titlesec}
+
 
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT  DEFINITIONS
@@ -241,29 +244,32 @@
 % param 3:	institution (where did you work / study)
 % param 4:	list of paragraphs
 %
-\newcommand{\cvevent}[5]
+\newcommand{\cvevent}[6]
 {
-
-\begin{tabular*}{1\textwidth}{p{13.6cm} x {3.9cm}}
-	\textbf{#2} - \textcolor{bgcol}{#3} &  \vspace{2pt}\textcolor{sectcol}{#1}
+\begin{tabular*}{1\textwidth}{p{13.6cm} x {3.8cm}}
+    \hspace{-8pt}\textbf{#2} - {#3} & \vspace{2pt}\textcolor{sectcol}{\emph{#1}}
 \end{tabular*}
+
+\ifthenelse{\isempty{#4}}{}{
+    \vspace{2pt}\textcolor{darkgray}{\small\emph{#4}}
+}
 
 \vspace{-8pt}
 \textcolor{softcol}{\hrule}
 
-\ifthenelse{\isempty{#4}}{
+\ifthenelse{\isempty{#5}}{
     \vspace{4pt}
 }{
-    \vspace{6pt}{#4}
+    \vspace{6pt}{#5}
     \vspace{6pt}
 }
 
-\ifthenelse{\isempty{#5}}{}{
-    \foreach \desc in {#5}{
+\ifthenelse{\isempty{#6}}{}{
+    \foreach \desc in {#6}{
         $\cdot$ \desc\\[3pt]
     }%
 }
-	
+
 \vspace{3pt}
 }
 
@@ -278,6 +284,11 @@
 % CUSTOM STRUT FOR EMPTY BOXES
 %----------------------------------------- -----------------------------------------------
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+
+%----------------------------------------------------------------------------------------
+% Hyperlink helper
+%----------------------------------------- -----------------------------------------------
+\newcommand{\myref}[2] {\textcolor{gray}{\href{#2}{#1}}}
 
 %============================================================================%
 %
@@ -300,7 +311,6 @@
 
 \begin{minipage}{0.8\textwidth}\flushleft
     \HUGE \textsc{MING-RUEY(RAY) CHOU}\\[2pt]
-	\small Computer Vision Engineer
 \end{minipage}
 \begin{minipage}{0.2\textwidth}\flushright
     \includegraphics[scale=0.04,trim={0 8cm 0 0},clip]
@@ -312,10 +322,11 @@
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-\metasection{Taipei, Taiwan}{Fields: Image processing algorithm devlopement and optimization}
-\metasection{\faicon{envelope} imchou239@gmail.com}{Tools \& Libraries: OpenCV, Tensorflow, Jax, Docker, Git}
-\metasection{\faicon{github} MingRuey}{Programming Languages: Python, C\#, C{++}, CUDA}
-\metasection{\faicon{linkedin} ---}{}
+\metasection{}{Fields: Computer vision algorithm development and optimization}
+\metasection{\faicon{github} \myref{MingRuey}{https://github.com/MingRuey}}{Tools \& Libraries: OpenCV, Tensorflow, Jax, Docker, Git}
+\metasection{\faicon{linkedin} \myref{ming-ruey-chou}{https://www.linkedin.com/in/ming-ruey-chou}}{Programming Languages: Python, C\#, C{++}, CUDA}
+\metasection{\faicon{envelope} imchou239@gmail.com}{Operating System: Linux, Windows}
+\metasection{}{Software Design: Object-oriented programming, Test-driven development}
 \vspace{-2pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
@@ -327,14 +338,26 @@
 %----------------------------------------------------------------------------------------
 \vspace{-6pt}
 \cvsection{Summary}
-Digital media graduate with project experience in the field of technology based assessment. Currently working as IT Consultant at We4IT, Bremen in the field of IBM Notes Domino and XPages applications. Master studies focused on teams from different disciplines and cultural backgrounds on solutions for complex problems.\\
-
+Ray is a software engineer with a proven track record of applying with both traditional image processing and deep learning techniques to solve real-world problems.
+He has a creative mind for inventing novel algorithms and hands-on skills for writing production-level codes and optimizing them for real-time usage.
 
 %============================================================================%
 %
 %	CV SECTIONS AND EVENTS (MAIN CONTENT)
 %
 %============================================================================%
+
+%CV Event template
+%\cvevent
+%    {Time}{Title}
+%    {Organization, Location}
+%    {Role Summary}
+%    {Awards, Protmotions}
+%    {
+%        {achievement1},
+%        {achievement2},
+%        {achievement3},
+%    }
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
@@ -344,38 +367,48 @@ Digital media graduate with project experience in the field of technology based 
 \cvevent
     {2021 JUL - Current}{Machine Learning Engineer}
     {Geosciences of Princeton University, NJ, USA}
-    {GGGG}{
-    {\href{https://www.cylai.princeton.edu/}{Lai Research Group}},
-	{Develop and evaluate the next generation learning management system with Meteor}
-}
+    {Physics assisted machine learning for understanding ice dynamics at \myref{Lai Research Group}{https://www.cylai.princeton.edu/}}
+    {}
+    {
+        {Achieve 5x speed-up on single GPU and linear speed gain on parallel computing over GPUs with Jax},
+        {Promote the code transparency and reproducibility by clear documentation and robust environment control}
+    }
 
 \cvevent
     {2019 - 2021 JUN}{Computer Vision Engineer}
-    {\href{https://www.utechzone.com.tw/index_en.php}{UTECHZONE}, Taipei, Taiwan}
-    {GGG}{
-	{Develop and evaluate the next generation learning management system with Meteor},
-	{Develop and evaluate the next generation learning management system with Meteor}
-}
+    {\myref{UTECHZONE}{https://www.utechzone.com.tw/index_en.php}, Taipei, Taiwan}
+    {Real-time defect detection in PCB \& wafer manufacturing }
+    {Promotion to team lead: 2019 Sep}
+    {
+        {Lead a team of four to develop a solution for PCB defect detection; blend traditional image processing with deep learning
+         to reduce the false-negative rate by from 1000 to 100 ppm at >90\% overall accuracy},
+        {Key developer of a defect detection system targeting for CPU-GPU heterogeneous device;
+         optimize program throughput via multithreading and writing CUDA C to offload computations to GPU},
+        {Invent novel image processing algorithms: 
+         an algorithm for optical character verification, or OCV, with >80\% accuracy, outperforming the existing (<50\% accuracy);
+         a fast and robust short and open circuit detector for wafer manufacturing},
+        {Conduct failure analysis and performance improvement on object detection and classification models},
+        {Design and develop a Python-based deep learning engine which becomes the canonical library of the company;
+         set up automated tests for the library from scratch to >70\% coverage}
+    }
 
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
-
 \cvevent
     {2016}{M.Sc. in Physics}
     {National Taiwan University}
-    {}{
-	{Thesis: Rheometry on Concentrated Suspension of Soft Particles},
-    {\href{https://doi.org/10.1039/D0SM00405G}{Publish on Soft Matter: doi.org/10.1039/D0SM00405G}},
-    {\href{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}{Mandarin website: www.phys.sinica.edu.tw/jctsai/Ray2016/}}
-}
+    {}{Thesis - Rheometry on Concentrated Suspension of Soft Particles}
+    {
+        {Publish on Soft Matter - \myref{doi.org/10.1039/D0SM00405G}{https://doi.org/10.1039/D0SM00405G}},
+        {Mandarin website - \myref{www.phys.sinica.edu.tw/jctsai/Ray2016/}{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}}
+    }
 
 \cvevent
     {2013}{B.Sc. in Physics}
     {National Taiwan University}
-    {}{
-}
+    {}{}{}
 
 %---------------------------------------------------------------------------------------
 %	OTHERS SECTION
@@ -383,15 +416,22 @@ Digital media graduate with project experience in the field of technology based 
 \cvsection{Other Experience}
 
 \cvevent
-    {2018 to Present}{Course Design and Project Mentor}
-    {Twin Oaks}
-    {}{
-}
+    {2021 Fall}{Teaching Assistant}
+    {Geosciences Department of Princeton University, NJ, USA}
+    {}{AOS551 Deep Learning in Geophysical Fluid Dynamics}{}
+
 \cvevent
-    {2017}{Substitute Services in Education}
-    {Xinyi Elementary School, Hualien Taiwan}
+    {2018 - Current}{Course/Project Designer}
+    {\myref{Twin Oaks Education}{https://www.twinoaks-edu.com/}, Taiwan}
     {}{
-}
+      21st century learning for high school students:
+      \myref{See-Think-Wonder Challenge}{https://www.stwchallenge.org/},
+      \myref{Camp for Business World}{https://www.twinoaks-edu.com/business-world}
+    }{}
+\cvevent
+    {2016 - 2017}{Substitute Services in Education}
+    {Xinyi Elementary School, Hualien Taiwan}
+    {}{}{}
 
 %--------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
