@@ -76,7 +76,6 @@
 %debug page outer frames
 %\usepackage{showframe}			
 
-
 %define page styles using geometry
 \usepackage[a4paper]{geometry}		
 
@@ -90,12 +89,10 @@
 %less space between header and content
 \setlength{\headheight}{-5pt}		
 
-
 %customize entries left, center and right
 %\lhead{}
 %\chead{}
 %\rhead{}
-
 
 %indentation is zero
 \setlength{\parindent}{0mm}
@@ -244,18 +241,19 @@
 % param 3:	institution (where did you work / study)
 % param 4:	list of paragraphs
 %
-\newcommand{\cvevent}[4]
+\newcommand{\cvevent}[5]
 {
 
-\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
-	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
+\begin{tabular*}{1\textwidth}{p{13.6cm} x {3.9cm}}
+	\textbf{#2} - \textcolor{bgcol}{#3} &  \vspace{2pt}\textcolor{sectcol}{#1}
 \end{tabular*}
 
 \vspace{-8pt}
 \textcolor{softcol}{\hrule}
+\vspace{6pt}{#4}
 \vspace{6pt}
 
-	\foreach \desc in {#4}{
+	\foreach \desc in {#5}{
 		$\cdot$ \desc\\[3pt]
 	}
 	
@@ -274,14 +272,6 @@
 %----------------------------------------- -----------------------------------------------
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
 
-%----------------------------------------------------------------------------------------
-% CUSTOM LOREM IPSUM
-%----------------------------------------------------------------------------------------
-\newcommand{\lorem}
-{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
-
-
-
 %============================================================================%
 %
 %
@@ -293,38 +283,24 @@
 %============================================================================%
 \begin{document}
 
-
 %use our custom fancy header definitions
 \pagestyle{fancy}	
 
-
-
-
-
-%----------------------------------------------------------------------------------------
-%	HEADER IMAGE
-%----------------------------------------------------------------------------------------
-
-%\begin{figure}[H]
-%\begin{flushright}
-%	\includegraphics[trim= 320 130 460 210,clip,width=0.2\linewidth]{myfoto.jpg}	%trimming relative to image size!
-%\end{flushright}
-%\end{figure}
-
-
 %---------------------------------------------------------------------------------------
-%	TITLE HEADLINE
+%	PHOTO and TITLE HEADLINE
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
-\begin{center}
+
+\begin{minipage}{0.8\textwidth}\flushleft
     \HUGE \textsc{MING-RUEY(RAY) CHOU}\\[2pt]
 	\small Computer Vision Engineer
-\end{center}
-
-
+\end{minipage}
+\begin{minipage}{0.2\textwidth}\flushright
+    \includegraphics[scale=0.04,trim={0 8cm 0 0},clip]
+    {./photo.jpg}
+\end{minipage}
 
 \vspace{6pt}
-
 
 %---------------------------------------------------------------------------------------
 %	META SECTION
@@ -358,12 +334,18 @@ Digital media graduate with project experience in the field of technology based 
 %----------------------------------------------------------------------------------------
 \cvsection{Experience}
 
-\cvevent{2021 JUL - Current}{Machine Learning Engineer}{Geosciences of Princeton University, NJ, USA}{
+\cvevent
+    {2021 JUL - Current}{Machine Learning Engineer}
+    {Geosciences of Princeton University, NJ, USA}
+    {GGGG}{
     {\href{https://www.cylai.princeton.edu/}{Lai Research Group}},
 	{Develop and evaluate the next generation learning management system with Meteor}
 }
 
-\cvevent{2019 - 2021 JUN}{Computer Vision Engineer}{\href{https://www.utechzone.com.tw/index_en.php}{UTECHZONE}, Taipei, Taiwan}{
+\cvevent
+    {2019 - 2021 JUN}{Computer Vision Engineer}
+    {\href{https://www.utechzone.com.tw/index_en.php}{UTECHZONE}, Taipei, Taiwan}
+    {GGG}{
 	{Develop and evaluate the next generation learning management system with Meteor},
 	{Develop and evaluate the next generation learning management system with Meteor}
 }
@@ -373,20 +355,36 @@ Digital media graduate with project experience in the field of technology based 
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
 
-\cvevent{2016}{M.Sc. in Physics}{National Taiwan University}{
+\cvevent
+    {2016}{M.Sc. in Physics}
+    {National Taiwan University}
+    {GG}{
 	{Thesis: Rheometry on Concentrated Suspension of Soft Particles},
     {\href{https://doi.org/10.1039/D0SM00405G}{Publish on Soft Matter: doi.org/10.1039/D0SM00405G}},
     {\href{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}{Mandarin website: www.phys.sinica.edu.tw/jctsai/Ray2016/}}
 }
 
-\cvevent{2013}{B.Sc. in Physics}{National Taiwan University}{}
+\cvevent
+    {2013}{B.Sc. in Physics}
+    {National Taiwan University}
+    {}{
+}
 
 %---------------------------------------------------------------------------------------
 %	OTHERS SECTION
 %--------------------------------------------------------------------------------------
 \cvsection{Other Experience}
-\cvevent{2018 to Present}{Course Design and Project Mentor}{Twin Oaks}{}
-\cvevent{2017}{Substitute Services in Education}{Xinyi Elementary School, Hualien Taiwan}{}
+
+\cvevent
+    {2018 to Present}{Course Design and Project Mentor}
+    {Twin Oaks}
+    {}{
+}
+\cvevent
+    {2017}{Substitute Services in Education}
+    {Xinyi Elementary School, Hualien Taiwan}
+    {}{
+}
 
 %--------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
