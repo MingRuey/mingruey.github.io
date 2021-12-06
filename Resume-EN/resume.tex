@@ -251,8 +251,12 @@
 \vspace{-8pt}
 \textcolor{softcol}{\hrule}
 
-\vspace{6pt}{#4}
-\vspace{6pt}
+\ifthenelse{\isempty{#4}}{
+    \vspace{4pt}
+}{
+    \vspace{6pt}{#4}
+    \vspace{6pt}
+}
 
 \ifthenelse{\isempty{#5}}{}{
     \foreach \desc in {#5}{
@@ -361,7 +365,7 @@ Digital media graduate with project experience in the field of technology based 
 \cvevent
     {2016}{M.Sc. in Physics}
     {National Taiwan University}
-    {GG}{
+    {}{
 	{Thesis: Rheometry on Concentrated Suspension of Soft Particles},
     {\href{https://doi.org/10.1039/D0SM00405G}{Publish on Soft Matter: doi.org/10.1039/D0SM00405G}},
     {\href{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}{Mandarin website: www.phys.sinica.edu.tw/jctsai/Ray2016/}}
