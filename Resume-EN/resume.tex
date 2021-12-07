@@ -68,6 +68,11 @@
 % more font size definitions
 \usepackage{moresize}		
 
+% allow boldness control
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{electrum}
+
 % reduce spaces between sections 
 \usepackage[compact]{titlesec}
 
@@ -216,10 +221,13 @@
 % create a coloured box with arrow and title as cv section headline
 % param 1: section title
 %
-\newcommand{\cvsection}[1]
+\newcommand{\cvsection}[2]
 {
+    \ifthenelse{\isempty{#1}}{}{
+        \vspace{#1}
+    }
 	\begin{center}
-		\large\textcolor{sectcol}{\textbf{#1}}
+		\large\textcolor{sectcol}{\textbf{#2}}
 	\end{center}
 }
 
@@ -244,7 +252,7 @@
 % param 3:	institution (where did you work / study)
 % param 4:	list of paragraphs
 %
-\newcommand{\cvevent}[6]
+\newcommand{\cvevent}[8]
 {
 \begin{tabular*}{1\textwidth}{p{13.6cm} x {3.8cm}}
     \hspace{-8pt}\textbf{#2} - {#3} & \vspace{2pt}\textcolor{sectcol}{\emph{#1}}
@@ -266,6 +274,19 @@
 
 \ifthenelse{\isempty{#6}}{}{
     \foreach \desc in {#6}{
+        $\cdot$ \desc\\[3pt]
+    }%
+}
+
+\ifthenelse{\isempty{#7}}{
+}{
+    \vspace{-10pt}
+    \vspace{6pt}{#7}
+    \vspace{6pt}
+}
+
+\ifthenelse{\isempty{#8}}{}{
+    \foreach \desc in {#8}{
         $\cdot$ \desc\\[3pt]
     }%
 }
@@ -336,10 +357,9 @@
 %---------------------------------------------------------------------------------------
 %	SUMMARAY (optional)
 %----------------------------------------------------------------------------------------
-\vspace{-6pt}
-\cvsection{Summary}
-Ray is a software engineer with 3-years of experience applying traditional image processing and deep learning techniques to solve real-world problems.
-He has a creative mind for inventing novel algorithms and hands-on skills for writing production-level codes and optimizing them for real-time usage.
+\cvsection{-10pt}{Summary}
+Ray is a software engineer with 3-years of experience applying digital image processing and deep learning techniques to solve real-world problems.
+He develops new algorithms, writes production-level codes, and optimizes them for real-time usage.
 
 %============================================================================%
 %
@@ -352,17 +372,20 @@ He has a creative mind for inventing novel algorithms and hands-on skills for wr
 %    {Time}{Title}
 %    {Organization, Location}
 %    {Role Summary}
-%    {Awards, Protmotions}
+%    {Period description 1}
 %    {
-%        {achievement1},
-%        {achievement2},
-%        {achievement3},
+%        {achievement1 in period1},
+%        {achievement2 in period1},
+%        {achievement3 in period1},
+%    }{Period description 2}{
+%        {achievement4 in period2},
+%        {achievement5 in period2},
+%        {achievement6 in period2},
 %    }
-
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\cvsection{Experience}
+\cvsection{-5pt}{Experience}
 
 \cvevent
     {2021 JUL - Current}{Machine Learning Engineer}
@@ -371,22 +394,26 @@ He has a creative mind for inventing novel algorithms and hands-on skills for wr
     {}
     {
         {Achieve 5x speed-up on single GPU and linear speed gain on parallel computing over GPUs with Jax},
-        {Promote the code transparency and reproducibility by clear documentation and robust environment control}
-    }
+        {Lead on setting up infrastructure on code development cycle in a sustainable way},
+        {Coach PhD/undergraduate students on core coding skills}
+    }{}{}
 
 \cvevent
-    {2019 FEB - 2021 JUN}{Computer Vision Engineer}
+    {2019 FEB - 2021 JUN}{Computer Vision Engineer, Team Lead}
     {\myref{UTECHZONE}{https://www.utechzone.com.tw/index_en.php}, Taipei, Taiwan}
     {Real-time defect detection in PCB \& wafer manufacturing }
-    {Promotion to team lead: 2019 Sep}
+    {\textsb{Promotion to team lead: 2020 Sep}}
     {
-        {Lead a team of four to develop a solution for PCB defect detection; blend traditional image processing with deep learning
-         to reduce the false-negative rate by from 1000 to 100 ppm at >90\% overall accuracy},
+        {Lead a team of four to develop a solution blending deep-learning-based object detection with morphological
+         processing/pattern matching; reduce the false-negative rate by from 1000 to 100 ppm at >90\% overall accuracy},
         {Key developer of a defect detection system targeting for CPU-GPU heterogeneous device;
          optimize program throughput via multithreading and offloading computations onto GPU},
         {Invent novel image processing algorithms: 
          an algorithm for optical character verification, or OCV, with >80\% accuracy, outperforming the existing (<50\% accuracy);
-         a fast and robust short and open circuit detector for wafer manufacturing},
+         a fast and robust short and open circuit detector for wafer manufacturing}
+    }
+    {\textsb{Join as computer vision engineer}}
+    {
         {Conduct failure analysis and performance improvement on object detection and classification models},
         {Design and develop a Python-based deep learning engine which becomes the canonical library of the company;
          set up automated tests for the library from scratch to >70\% coverage}
@@ -395,7 +422,7 @@ He has a creative mind for inventing novel algorithms and hands-on skills for wr
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
-\cvsection{Education}
+\cvsection{-10pt}{Education}
 \cvevent
     {2016}{M.Sc. in Physics}
     {National Taiwan University}
@@ -403,22 +430,23 @@ He has a creative mind for inventing novel algorithms and hands-on skills for wr
     {
         {Publish on Soft Matter - \myref{doi.org/10.1039/D0SM00405G}{https://doi.org/10.1039/D0SM00405G}},
         {Mandarin website - \myref{www.phys.sinica.edu.tw/jctsai/Ray2016/}{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}}
-    }
+    }{}{}
 
 \cvevent
     {2013}{B.Sc. in Physics}
     {National Taiwan University}
-    {}{}{}
+    {}{}{}{}{}
 
 %---------------------------------------------------------------------------------------
 %	OTHERS SECTION
 %--------------------------------------------------------------------------------------
-\cvsection{Other Experience}
+\cvsection{}{Other Experience}
 
 \cvevent
     {2021 Fall}{Teaching Assistant}
     {Geosciences Department of Princeton University, NJ, USA}
-    {}{AOS551 Deep Learning in Geophysical Fluid Dynamics}{}
+    {}{AOS551 Deep Learning in Geophysical Fluid Dynamics}{
+    }{}{}
 
 \cvevent
     {2018 - Current}{Course/Project Designer}
@@ -427,11 +455,11 @@ He has a creative mind for inventing novel algorithms and hands-on skills for wr
       21st century learning for high school students:
       \myref{See-Think-Wonder Challenge}{https://www.stwchallenge.org/},
       \myref{Camp for Business World}{https://www.twinoaks-edu.com/business-world}
-    }{}
+    }{}{}{}
 \cvevent
     {2016 - 2017}{Substitute Services in Education}
     {Xinyi Elementary School, Hualien Taiwan}
-    {}{}{}
+    {}{}{}{}{}
 
 %--------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
