@@ -1,0 +1,4 @@
+# latex output
+*.log
+*.aux
+*.out
