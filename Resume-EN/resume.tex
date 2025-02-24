@@ -88,7 +88,7 @@
 \usepackage[a4paper]{geometry}		
 
 % for example, change the margins to 2 inches all round
-\geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
+\geometry{top=0.8cm, bottom=0.0cm, left=1.3cm, right=1.3cm} 	
 
 %use customized header
 \usepackage{fancyhdr}				
@@ -334,8 +334,7 @@
     \HUGE \textsc{MING-RUEY(RAY) CHOU}\\[2pt]
 \end{minipage}
 \begin{minipage}{0.2\textwidth}\flushright
-    \includegraphics[scale=0.04,trim={0 8cm 0 0},clip]
-    {./photo.jpg}
+    \includegraphics[scale=0.075]{./photo.jpg}
 \end{minipage}
 
 \vspace{6pt}
@@ -343,11 +342,10 @@
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-\metasection{}{Fields: Computer vision algorithm development and optimization}
-\metasection{\faicon{github} \myref{MingRuey}{https://github.com/MingRuey}}{Tools \& Libraries: OpenCV, Tensorflow, Jax, Docker, Git}
-\metasection{\faicon{linkedin} \myref{ming-ruey-chou}{https://www.linkedin.com/in/ming-ruey-chou}}{Programming Languages: Python, C\#, C{++}, CUDA}
-\metasection{\faicon{envelope} imchou239@gmail.com}{Operating System: Linux, Windows}
-\metasection{}{Software Design: Object-oriented programming, Test-driven development}
+\metasection{\faicon{github} \myref{MingRuey}{https://github.com/MingRuey}}{Expertise: Computer vision and machine learning algorithm design and development}
+\metasection{\faicon{envelope} mingrueychou@gmail.com}{Programming Languages: Python, C\texttt{++}, C\#, on Linux \& Windows}
+\metasection{\faicon{linkedin} \myref{ming-ruey-chou}{https://www.linkedin.com/in/ming-ruey-chou}}{Tools \& Libraries: OpenCV, Tensorflow/PyTorch, Docker, Git}
+\metasection{}{Language Skill: Chinese (native), English (fluent), Japanese (JLPT N1, fluent reading, basic speaking)}
 \vspace{-2pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
@@ -358,8 +356,8 @@
 %	SUMMARAY (optional)
 %----------------------------------------------------------------------------------------
 \cvsection{-10pt}{Summary}
-Ray is a software engineer with 3-years of experience applying digital image processing and deep learning techniques to solve real-world problems.
-He develops new algorithms, writes production-level codes, and optimizes them for real-time usage.
+Ray is an image expert and software engineer with six years of experience applying computer vision and deep learning to real-world problems.
+He develops and adapts algorithms, leveraging deep understanding of image sensor characteristics and system requirements, and deploys them in scalable, production-ready systems.
 
 %============================================================================%
 %
@@ -385,39 +383,46 @@ He develops new algorithms, writes production-level codes, and optimizes them fo
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\cvsection{-5pt}{Experience}
+\cvsection{}{Experience}
 
 \cvevent
-    {2021 JUL - 2021 DEC}{Machine Learning Engineer}
-    {Geosciences of Princeton University, NJ, USA}
-    {Physics assisted machine learning for understanding ice dynamics at \myref{Lai Research Group}{https://www.cylai.princeton.edu/}}
+    {2022 Apr - Present}{Computer Vision Engineer}
+    {\myref{Axelspace}{https://www.axelspace.com/}, Tokyo, Japan}
     {}
+    {\textsb{Designer \& developer of satellite image processing pipeline for CMOS line sensor}}
     {
-        {Develop and conduct systematic tests on neural networks combined with a physics-aware loss function},
+        {Review and integrate upstream/downstream requirements and payload characterization into pipeline design},
+        {Develop key modules -- camera model estimation and refinement, super-resolution via half-pixel shifts, and more},
+        {Leverage AWS cloud infrastructure for scalable, high-volume image processing}
+    }
+    {\textsb{Developer of mission simulator, accurate satellite digital twins for pipeline validation}}
+    {
+        {Model accurately the telescope, sensor, and space-Earth coordinates in Blender to analyze the effects of lens distortion, time delay and integration (TDI), and surface elevation},
+        {Simulate key atmospheric and surface reflectance properties and implement an accurate BRDF}
+    }{}{}
+\cvevent
+    {2021 JUL - 2022 JAN}{Machine Learning Engineer}
+    {\myref{Lai's Group}{https://icyphysics.stanford.edu/}, Geosciences of Princeton University, NJ, USA}
+    {}
+    {\textsb{Physics assisted machine learning for understanding ice dynamics}}
+    {
+        {Conduct systematic tests on neural networks combined with a physics-aware loss function},
         {Lead on setting up infrastructure aiming for massively parallel computing on the CPU/GPU cluster;
          also provide mentorship on lab members around the code development cycle}
-    }{}{}
-
+     }{}{}
 \cvevent
     {2019 FEB - 2021 JUN}{Computer Vision Engineer, Team Lead}
     {\myref{UTECHZONE}{https://www.utechzone.com.tw/index_en.php}, Taipei, Taiwan}
-    {Real-time defect detection in PCB \& wafer manufacturing }
-    {\textsb{Promotion to team lead: 2020 Sep}}
+    {}
+    {\textsb{Real-time defect detection in PCB \& wafer manufacturing; Promotion to team lead: 2020 Sep}}
     {
-        {Lead a team of four to develop a solution blending deep-learning-based object detection with morphological
-         processing/pattern matching; reduce the false-negative rate by from 1000 to 100 ppm at >90\% overall accuracy},
-        {Key developer of a defect detection system targeting for CPU-GPU heterogeneous device;
-         optimize program throughput via multithreading and offloading computations onto GPU},
-        {Invent novel image processing algorithms: 
-         an algorithm for optical character verification, or OCV, with >80\% accuracy, outperforming the existing (<50\% accuracy);
-         a fast and robust short and open circuit detector for wafer manufacturing}
-    }
-    {\textsb{Join as computer vision engineer}}
-    {
-        {Conduct failure analysis and performance improvement on object detection and classification models},
+        {Lead a team of four to develop a noval solution blending deep-learning-based object detection with image processing;
+         reduce the false-negative rate by from 1000 to 100 ppm at >90\% overall accuracy},
+        {Invent multiple novel image processing algorithms for wafer manufacturing defect detection;
+         target for CPU-GPU heterogeneous system and maximize throughput via multithreading and offloading computations onto GPU},
         {Design and develop a Python-based deep learning engine which becomes the canonical library of the company;
          set up automated tests for the library from scratch to >70\% coverage}
-    }
+     }{}{}
 
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -428,8 +433,8 @@ He develops new algorithms, writes production-level codes, and optimizes them fo
     {National Taiwan University}
     {}{Thesis - Rheometry on Concentrated Suspension of Soft Particles}
     {
-        {Publish on Soft Matter - \myref{doi.org/10.1039/D0SM00405G}{https://doi.org/10.1039/D0SM00405G}},
-        {Mandarin website - \myref{www.phys.sinica.edu.tw/jctsai/Ray2016/}{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}}
+        {Publish on Soft Matter - \myref{doi.org/10.1039/D0SM00405G}{https://doi.org/10.1039/D0SM00405G};
+         website (Mandarin) \myref{www.phys.sinica.edu.tw/jctsai/Ray2016/}{http://www.phys.sinica.edu.tw/jctsai/Ray2016/}}
     }{}{}
 
 \cvevent
@@ -451,11 +456,8 @@ He develops new algorithms, writes production-level codes, and optimizes them fo
 \cvevent
     {2018 - Current}{Course/Project Designer}
     {\myref{Twin Oaks Education}{https://www.twinoaks-edu.com/}, Taiwan}
-    {}{
-      21st century learning for high school students:
-      \myref{See-Think-Wonder Challenge}{https://www.stwchallenge.org/},
-      \myref{Camp for Business World}{https://www.twinoaks-edu.com/business-world}
-    }{}{}{}
+    {}{21st century learning for high school students: \myref{See-Think-Wonder Challenge}{https://www.stwchallenge.org/}}{
+    }{}{}
 \cvevent
     {2016 SEP - 2017 OCT}{Substitute Services in Education}
     {Xinyi Elementary School, Hualien Taiwan}
